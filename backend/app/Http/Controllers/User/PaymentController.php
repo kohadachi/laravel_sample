@@ -1,18 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
-use Auth;
 use Illuminate\Http\Request;
 use Stripe\Stripe;
 use Stripe\Customer;
 use Stripe\Charge;
+use Illuminate\Support\Facades\Auth;
+use App\Payment;
+use App\Models\User;
+
 
 class PaymentController extends Controller
 {
     //
     public function getCurrentPayment(){
-        $user = Auth::user(); //要するにUser情報を取得したい
+        $user = User::find("1");//要するにUser情報を取得したい
         $defaultCard = Payment::getDefaultcard($user);
 
         return view('user.payment.index', compact('user', 'defaultCard'));

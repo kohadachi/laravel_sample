@@ -1,5 +1,5 @@
 <div class="card-body">
-    <form action="{{route('payment.store')}}" class="card-form" id="form_payment" method="POST">
+    <form action="{{route('user.payment.store')}}" class="card-form" id="form_payment" method="POST">
         @csrf
         <div class="form-group">
             <label for="name">カード番号</label>
