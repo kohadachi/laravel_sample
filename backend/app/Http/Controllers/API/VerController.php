@@ -8,6 +8,16 @@ use App\Models\Ver;
 
 class VerController extends Controller
 {
+    /**
+     * バージョン一覧取得
+     *
+     * バージョン一覧の情報を返却する
+     *
+     * @response {
+     *  "result": true,
+     *  "version": "v1.0.1",
+     *  "min_version": "v1.0.1"
+     */
     public function index()
     {
        try {

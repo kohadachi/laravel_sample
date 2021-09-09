@@ -1,0 +1,64 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "3474c5cf-9c85-4b27-a14a-6c2aaaf8a1fd",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "\u30d0\u30fc\u30b8\u30e7\u30f3\u4e00\u89a7\u53d6\u5f97",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/ver",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/ver"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "\u30d0\u30fc\u30b8\u30e7\u30f3\u4e00\u89a7\u306e\u60c5\u5831\u3092\u8fd4\u5374\u3059\u308b",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"result\": true,\n \"version\": \"v1.0.1\",\n \"min_version\": \"v1.0.1\"",
+                            "name": "200"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

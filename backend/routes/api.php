@@ -15,8 +15,8 @@ use App\Http\Controllers\API\VerController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::middleware('auth:api')->get('ver', [VerController::class, 'index']);
+Route::get('/ver', [VerController::class, 'index']);
