@@ -1,3 +1,6 @@
+<script src="https://js.stripe.com/v3/"></script>
+<script src="js/payment.js"></script>
+
 <div class="card-body">
     <form action="{{route('user.payment.store')}}" class="card-form" id="form_payment" method="POST">
         @csrf
@@ -26,3 +29,4 @@
     </form>
     <a href="{{route('user.payment')}}">クレジットカード情報ページに戻る</a>
 </div>
+

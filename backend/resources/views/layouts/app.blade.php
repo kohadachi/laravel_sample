@@ -1,3 +1,3 @@
-@if(request()->path()==='user/payment/form')
-    @include('parts.payment');
-@endif
+<x-layouts.base>
+    <!-- contents -->
+</x-layouts.base>
