@@ -1,5 +1,0 @@
-{
-    "require": {
-        "mpociot/laravel-apidoc-generator": "^4.8"
-    }
-}
