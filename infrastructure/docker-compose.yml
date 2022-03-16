@@ -1,0 +1,36 @@
+version: "3.8"
+volumes:
+  db-store:
+  php-fpm-socket:
+services:
+  app:
+    container_name: onlineprescribe-backend
+    build: ./docker/php
+    volumes:
+      - php-fpm-socket:/var/run/php-fpm
+      - ../backend:/work/backend
+  server:
+    container_name: onlineprescribe-server
+    build: ./docker/server/php
+    volumes:
+      - php-fpm-socket:/var/run/php-fpm
+      - ../server:/work/server
+  web:
+    container_name: onlineprescribe-web
+    build: ./docker/nginx
+    ports:
+      - 80:80
+      - 8081:79
+    volumes:
+      - php-fpm-socket:/var/run/php-fpm
+      - ../backend:/work/backend
+      - ../server:/work/server
+  db:
+    container_name: onlineprescribe-db
+    build: ./docker/mysql
+    volumes:
+      - db-store:/var/lib/mysql
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
